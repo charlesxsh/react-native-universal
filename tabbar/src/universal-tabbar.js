@@ -66,21 +66,12 @@ class Tabbar extends React.Component {
 
   render() {
     let currentScene = this.scenes.map((p,i)=>{
-      // const sceneContainerStyle = this.state.selectedTab == i?{flex:1}:styles.gone;
-      //   return (
-      //     <View key={i} style={sceneContainerStyle}>
-      //     {p}
-      //     </View>
-      //   );
-      if(this.state.selectedTab === i){
+      const sceneContainerStyle = this.state.selectedTab == i?{flex:1}:styles.gone;
         return (
-           <View key={i} style={{flex:1}}>
-           {p}
-           </View>
-         );
-      }else{
-        return null;
-      }
+          <View key={i} style={sceneContainerStyle}>
+          {p}
+          </View>
+        );
       }
     );
     return (

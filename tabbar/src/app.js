@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import {Tabbar, TabbarItem} from './universal-tabbar';
+import {ElasticView} from './elastic-view';
 
 class Page1 extends Component{
     componentDidMount(){
@@ -21,7 +22,17 @@ class Page1 extends Component{
     }}
         
 >
-            <Text> page1 </Text>
+            <ElasticView style={{
+                marginHorizontal: 10,
+            }}>
+                <Text>this is shown area
+                 </Text>
+                <Text> 
+                this is hidden area
+                this is hidden area
+                this is hidden area
+                </Text>
+            </ElasticView>
          </View>);
     }
 }
